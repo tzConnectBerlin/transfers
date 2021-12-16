@@ -23,9 +23,10 @@ def connect_db():
 
 def insert_transfer(cur, block_height, deets):
     print(deets)
-    cur.execute("INSERT INTO transfers(block_height, source, destination, amount)  VALUES (%s, %s, %s, %s);",
+    cur.execute("INSERT INTO transfers(block_height, source, destination, amount, opg)  VALUES (%s, %s, %s, %s, %s);",
                 (block_height, deets['source'],
-                 deets['destination'], deets['amount']))
+                 deets['destination'], deets['amount'],
+                 deets['opg']))
 
 
 if __name__ == '__main__':
