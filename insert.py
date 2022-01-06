@@ -32,6 +32,7 @@ def insert_transfer(cur, block_height, deets):
 
 if __name__ == '__main__':
     block = int(sys.argv[1])
+    print(block)
     conn = connect_db()
     cur = conn.cursor()
     data = sys.stdin.read()

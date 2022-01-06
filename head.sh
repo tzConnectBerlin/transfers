@@ -1,7 +1,8 @@
 #!/bin/bash
 
 CHAIN_HEAD=`curl --silent http://localhost:8732/chains/main/blocks/head|jq .header.level`
-DB_HEAD=`psql -t -h localhost -U quepasa tezos -c 'select max(block_height) from transfers'`
+
+DB_HEAD=`psql -t -h localhost -U quepasa tezos -c 'select max(block_height) from transfers.transfers'`
 
 echo $CHAIN_HEAD $DB_HEAD
 
