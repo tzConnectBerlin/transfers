@@ -23,8 +23,8 @@ def connect_db():
 
 def insert_transfer(cur, block_height, deets):
     print(deets)
-    cur.execute("DELETE FROM transfers WHERE block_height = %s;",
-                (block_height,))
+#    cur.execute("DELETE FROM transfers WHERE block_height = %s;",
+#               (block_height,))
     cur.execute("INSERT INTO transfers(block_height, source, destination, amount, opg)  VALUES (%s, %s, %s, %s, %s);",
                 (block_height, deets['source'],
                  deets['destination'], deets['amount'],
