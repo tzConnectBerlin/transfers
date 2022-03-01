@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS transfers.transfers
     block_height bigint,
     source text COLLATE pg_catalog."default",
     destination text COLLATE pg_catalog."default",
-    amount numeric(60,0),
+    amount numeric(18,0),
     opg text COLLATE pg_catalog."default",
     CONSTRAINT transfers_pkey PRIMARY KEY (id)
 );
